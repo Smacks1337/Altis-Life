@@ -139,7 +139,14 @@ switch(_shop) do
 						["20Rnd_556x45_UW_mag",nil,125],
 						["30Rnd_556x45_Stanag",nil,300],
 						["10Rnd_762x51_Mag",nil,500],
-						["30Rnd_65x39_caseless_green",nil,275]
+						["30Rnd_65x39_caseless_green",nil,275],
+						["srifle_LRR_F",nil,500000],
+						["7Rnd_408_Mag",nil,10],
+						["LMG_Mk200_F",nil,200000],
+						["200Rnd_65x39_cased_Box",nil,10],
+						["launch_Titan_F",nil,1500000],
+						["M_Titan_AA",nil,100000],
+						["optic_Nightstalker",nil,100000]
 					]
 				];
 			};
