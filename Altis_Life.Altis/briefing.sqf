@@ -1,15 +1,15 @@
 waitUntil {!isNull player && player == player};
 if(player diarySubjectExists "rules")exitwith{};
 
-player createDiarySubject ["changelog","Change Log"];
-player createDiarySubject ["serverrules","General Rules"];
-player createDiarySubject ["policerules","Police Procedures/Rules"];
+player createDiarySubject ["changelog","Aenderungen"];
+player createDiarySubject ["serverrules","Server Regeln"];
+player createDiarySubject ["policerules","Strafenkatalog"];
 player createDiarySubject ["safezones","Safe Zones (No Killing)"];
 //player createDiarySubject ["civrules","Civilian Rules"];
-player createDiarySubject ["illegalitems","Illegal Activity"];
+player createDiarySubject ["illegalitems","Illegale Aktivitaeten"];
 //player createDiarySubject ["gangrules","Gang Rules"];
 //player createDiarySubject ["terrorrules","Terrorism Rules"];
-player createDiarySubject ["controls","Controls"];
+player createDiarySubject ["controls","Steuerung"];
 
 /*  Example
 	player createDiaryRecord ["", //Container
@@ -23,18 +23,18 @@ player createDiarySubject ["controls","Controls"];
 */
 	player createDiaryRecord["changelog",
 		[
-			"Official Change Log",
+			"Offizieller Changelog",
 				"
-					The official change log can be found on the BIS forums (search Altis Life RPG)
+					Der offizielle Changelog von Altis Life RPG 3.1.3 kann im BIS Forum gefunden (einfach nach Altis Life RPG bei Google suchen)
 				"
 		]
 	];
 	
 	player createDiaryRecord["changelog",
 		[
-			"Custom Change Log",
+			"Eigene Aenderungen",
 				"
-					This section is meant for people doing their own edits to the mission, DO NOT REMOVE THE ABOVE.
+					Hier werden zukuenftig eigene Aenderungen aufgelistet.
 				"
 		]
 	];
@@ -43,13 +43,13 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"Exploits", 
 				"
-				These are considered exploits, and you will not be kicked, but banned.<br/><br/>
+                                Es gibt verschiedene Exploits, die beim Ausnutzen zum sofortigen Bann fuehren.<br/><br/>
 
-				1. Getting out of jail via any method other than paying bail or escaping via helicopter.<br/>
-				2. Killing yourself to get out of roleplay. Getting out of being tazed, restrained, arrested, jail, etc. If the log shows you got arrested, then you died, you will be banned. Do not pay bail and kill yourself for an easy ride home. Walk you lazy turd.<br/>
-				3. Duping items and/or money. If someone sends you an unobtainable amount of money right at the start of the game, report to an admin IMMEDIATELY and transfer said money to an admin. Do this ASAP or an admin could ban you if they see that much on you without question.<br/>
-				4. Using clearly hacked items. If a hacker comes in and spawns unobtainable items, you could be banned for using said items. Report the items to the admins immediately and stay away from them.<br/>
-				5. Abusing bugs or game mechanics for gain. Is there a replicating gun somewhere? Report it and leave it alone. If an admin catches you abusing the glitch, ban.<br/><br/>
+				1. Aus dem Gefaengnis fliehen ueber irgendeine andere Methode als die Strafe zu bezahlen oder mit dem Helikopter zu entkommen.<br/>
+				2. Sich selbst toeten oder durch andere toeten lassen um das Rollenspiel oder eine Strafe zu umgehen.<br/>
+				3. Gegenstaende oder Geld ueber Bugs im Spiel vervielfachen.<br/>
+				4. Benutzen oder behalten von eindeutig gehackten Gegenstaenden oder Fahrzeugen.<br/>
+				5. Ausnutzen von sonstigen Bugs oder Spiel Mechaniken zum eigenen Vorteil.<br/><br/>
 				"
 		]
 	];
@@ -58,12 +58,12 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"Safe Zones",
 				"
-					If bombing (bombing can be intentionally exploding a vehicle), robbing, or killing occurs around these or in these areas it is punishable by ban.<br/><br/>
+					Das Toeten, Verletzen oder Ausrauben von anderen Spielern in den folgenden Safe Zones ist verboten und kann mit einem Bann geahndet werden:<br/><br/>
 					
-					Any vehicle spawn (shop or garage)<br/>
-					Any weapon shop<br/>
-					All Police HQs<br/>
-					Rebel Outposts<br/>
+					Fahrzeug-Spawnpunkte (Shop oder Garage)<br/>
+					Waffen Shops<br/>
+					Polizei Hauptquartiere<br/>
+					Rebellen Außenposten<br/>
 					Donator Shops<br/><br/>
 				"
 		]
@@ -72,38 +72,40 @@ player createDiarySubject ["controls","Controls"];
 	
 	player createDiaryRecord ["serverrules",
 		[
-			"Bannable Offenses", 
+			"Gruende fuer einen Bann", 
 				"
-				Consider this your one and only warning.<br/><br/>
+				Diese Regeln sind die einzige Warnung vor einem Bann.<br/>
+                                Es wird keine weitere Verwarnung im Spiel erfolgen.<br/><br/>
 				
 				1. Hacking<br/>
 				2. Cheating<br/>
-				3. Exploiting (See 'Exploits')<br/>
-				4. Being kicked 3 or more times.<br/><br/>
+				3. Exploiting (Siehe 'Exploits')<br/>
+				4. Mehrfach schon gekickt worden.<br/>
+                                5. VDM: Ueberfahren von Leuten<br/>
+                                6. RDM: Wahlloses Toeten von anderen Spielern ohne Rollenspiel. Siehe RDM Regeln.<br/><br/>
 				"
 		]
 	];
 	
 	player createDiaryRecord ["serverrules",
 		[
-			"Cop Interaction", 
+			"Behinderung der Polizei", 
 				"
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
+                                Punkte die auf dieser Liste stehen koennen zu einem Kick oder Bann fuehren.<br/><br/>
 				
-				1. Civilians can be arrested for looking in cops' backpacks/vehicles. Constantly doing this will result in your removal from the server.<br/>
-				2. Civilians can be arrested for following cops in game in order to give away their position.<br/>
-				3. Civilians or Rebels who take up arms to kill cops in town or elsewhere for no RP reason will be considered RDMing. See RDMing section.<br/>
-				4. Following and or harassing cops for long periods of time will be considered griefing and/or spamming, and will result in your removal from the server.<br/>
-				5. Actively blocking cops from doing their duties can lead to your arrest. Constantly doing this will result in your removal from the server.<br/><br/>
+				1. Zivilisten werden für das Oeffnen von Rucksaecken oder Fahrzeugen der Polizei verhaftet. Sollte dies mehrfach passieren kann ein Bann des Spielers erfolgen.<br/>
+				2. Das staendige Folgen oder Nerven von Polizisten.<br/>
+				3. Das Toeten von Polizisten in Staedten oder an sonstigen Standorten ohne RP faellt unter RDM. Siehe RDM Regeln.<br/>
+				5. Für das aktive Abhalten von Polizisten ihre Arbeit zu tun wird man verhaftet. Sollte dies mehrfach passieren kann ein Bann des Spielers erfolgen.<br/><br/>
 				"
 		]
 	];
 	
 	player createDiaryRecord ["serverrules",
 		[
-			"Boats", 
+			"Boote", 
 				"
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
+                                Punkte die auf dieser Liste stehen koennen zu einem Kick oder Bann fuehren.<br/><br/>
 				
 				1. Repeatedly pushing boats without permission.<br/>
 				2. Pushing a boat with the intention of hurting or killing someone. This is not RP, it is just a flaw in the mechanics.<br/>
@@ -114,9 +116,9 @@ player createDiarySubject ["controls","Controls"];
 	
 	player createDiaryRecord ["serverrules",
 		[
-			"Aviation", 
+			"Luftfahrt", 
 				"
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
+                                Punkte die auf dieser Liste stehen koennen zu einem Kick oder Bann fuehren.<br/><br/>
 				
 				1. Purposefully ramming a helicopter into anything. Other helicopters, vehicles, buildings.<br/>
 				2. Flying below 150m over the city constantly. Once is illegal, more than that you risk crashing into the city, thus against server rules.<br/>
@@ -127,9 +129,9 @@ player createDiarySubject ["controls","Controls"];
 	
 	player createDiaryRecord ["serverrules",
 		[
-			"Vehicles", 
+			"Fahrzeuge", 
 				"
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
+                                Punkte die auf dieser Liste stehen koennen zu einem Kick oder Bann fuehren.<br/><br/>
 				
 				1. Purposefully running people over (VRDM). There are accidents, and then there is going out of your way to run someone over.<br/>
 				2. Purposefully throwing yourself in front of vehicles in order to die/get hurt.<br/>
@@ -144,9 +146,9 @@ player createDiarySubject ["controls","Controls"];
 	
 	player createDiaryRecord ["serverrules",
 		[
-			"Communication Rules", 
+			"Kommunikationsregeln", 
 				"
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
+                                Punkte die auf dieser Liste stehen koennen zu einem Kick oder Bann fuehren.<br/><br/>
 				
 				1. Side Chat may not be used to play music or otherwise micspam.<br/>
 				2. Spamming any chat channel will result in your removal.<br/>
@@ -160,7 +162,7 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"Random Deathmatching (RDM)", 
 				"
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
+                                Punkte die auf dieser Liste stehen koennen zu einem Kick oder Bann fuehren.<br/><br/>
 				
 				1. Killing anyone without a roleplay cause.<br/>
 				2. Declaring a rebellion is not a cause to kill anyone, even cops.<br/>
@@ -175,11 +177,11 @@ player createDiarySubject ["controls","Controls"];
 	];
 	player createDiaryRecord ["serverrules",
 		[
-			"New Life Rule", 
+			"New Life Regel", 
 				"
 				The New Life Rule applies to police and civilians.<br/><br/>
 				
-				Items on this list may result in your removal from the server and/or ban, based on the admins discretion.<br/><br/>
+                                Punkte die auf dieser Liste stehen koennen zu einem Kick oder Bann fuehren.<br/><br/>
 
 				1. If you are killed you must wait 15 minutes before returning to the scene of your death.<br/>
 				2. If you die during roleplay your past crimes are forgotten, but you also cannot seek revenge.<br/>

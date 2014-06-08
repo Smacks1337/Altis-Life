@@ -1,3 +1,21 @@
+// Admin Tool
+ModList = [];
+AdminList = [];
+SuperAdminList = [
+"76561197974601508",
+"76561197986667200",
+"76561197992248800",
+"76561197999682708",
+"76561198031877011",
+"76561198033347808",
+"76561198048772844",
+"76561198055589200",
+"76561198070700550",
+"76561198082010340",
+"76561198119288715",
+"76561198053334974"
+];
+
 enableSaving [false, false];
 
 X_Server = false;
@@ -18,7 +36,7 @@ if(isNull player) then
 */
 enableSaving[false,false];
 
-life_versionInfo = "Altis Life RPG v3.1.2";
+life_versionInfo = "Altis Life RPG v3.1.3";
 /*
 if(X_Client) then
 {
@@ -27,6 +45,8 @@ if(X_Client) then
 */
 [] execVM "briefing.sqf"; //Load Briefing
 [] execVM "KRON_Strings.sqf";
+[] execVM "welcomecredits.sqf";
+[] execVM "admintools\loop.sqf";
 
 if(!StartProgress) then
 {

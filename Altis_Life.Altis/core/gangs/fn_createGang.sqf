@@ -9,10 +9,10 @@ private["_value","_len","_group"];
 _value = ctrlText 2522;
 _len = [_value] call KRON_StrLen;
 
-if(_len > 25) exitWith {hint "The maximum character limit for a gang name is 25."};
-if(life_cash < 10000) exitWith {hint "You don't have $10,000 to create a gang!"};
-if(isNil {life_gang_list}) exitWith {hint "Server not authorized for feature."};
-if(([_value,life_gang_list] call fnc_index) != -1) exitWith {hint "That gang name is already taken!"};
+if(_len > 25) exitWith {hint "Die maximale Laenge eines Gang-Namens ist 25 Zeichen."};
+//if(life_cash < 10000) exitWith {hint "You don't have $10,000 to create a gang!"};
+if(isNil {life_gang_list}) exitWith {hint "Gangs sind deaktiviert."};
+if(([_value,life_gang_list] call fnc_index) != -1) exitWith {hint "Eine Gang mit diesem Namen existiert bereits."};
 
 _group = createGroup civilian;
 
@@ -24,7 +24,7 @@ player setRank "COLONEL";
 life_my_gang = _group;
 if(!isNull life_my_gang) then
 {
-	life_cash = life_cash - 10000;
+	//life_cash = life_cash - 10000;
 	closeDialog 0;
 	createDialog "Life_My_Gang_Diag";
 	publicVariable "life_gang_list";

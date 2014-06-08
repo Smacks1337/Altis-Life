@@ -29,6 +29,7 @@ switch (_filter) do
 		{
 			_ret set[count _ret,["U_B_CombatUniform_mcam_worn",nil,550]];
 		};
+                [] call life_fnc_copUniform;
 	};
 	
 	//Hats

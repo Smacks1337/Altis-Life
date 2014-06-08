@@ -42,6 +42,7 @@ class Life_Client_Core
 		class initCop {};
 		class initMedic {};
 		class welcomeNotification {};
+		class initZeus {};
 	};
 	
 	class Admin
@@ -280,6 +281,7 @@ class Life_Client_Core
 		class sirenLights {};
 		class licenseCheck {};
 		class licensesRead {};
+		class copUniform {};
 	};
 	
 	class Gangs
@@ -328,6 +330,9 @@ class Life_Client_Core
 		class lockpick {};
 		class spikeStrip {};
 		class jerryRefuel {};
+		class bankalarmsound {};
+		class UnLockCarSound {};
+		class LockCarSound {};
 	};
 	
 	class Dialog_Controls

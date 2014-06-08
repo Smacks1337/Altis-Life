@@ -173,16 +173,17 @@ switch (_code) do
 			if(isNil {_veh getVariable "siren"}) then {_veh setVariable["siren",false,true];};
 			if((_veh getVariable "siren")) then
 			{
-				titleText ["Sirens Off","PLAIN"];
+				titleText ["Martinshorn ausschalten","PLAIN"];
 				_veh setVariable["siren",false,true];
 			}
 				else
 			{
-				titleText ["Sirens On","PLAIN"];
+				titleText ["Martinshorn einschalten","PLAIN"];
 				_veh setVariable["siren",true,true];
 				if(playerSide == west) then {
 					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
 				} else {
+					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
 					//I do not have a custom sound for this and I really don't want to go digging for one, when you have a sound uncomment this and change medicSiren.sqf in the medical folder.
 					//[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
 				};
@@ -217,9 +218,11 @@ switch (_code) do
 					{
 						[[_veh,0], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 					};
-					systemChat "You have unlocked your vehicle.";
+					systemChat "Du hast dein Fahrzeug aufgeschlossen.";
+                                        [[_veh],"life_fnc_UnLockCarSound",nil,true] spawn life_fnc_MP;
 				}
-					else
+				
+                                else
 				{
 					if(local _veh) then
 					{
@@ -229,7 +232,8 @@ switch (_code) do
 					{
 						[[_veh,2], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 					};
-					systemChat "You have locked your vehicle.";
+					systemChat "Du hast dein Fahrzeug abgeschlossen.";
+					[[_veh],"life_fnc_LockCarSound",nil,true] spawn life_fnc_MP;
 				};
 			};
 		};
